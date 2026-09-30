@@ -1,21 +1,55 @@
-Project Description
-In this project, you will clean a messy synthetic employee dataset using a structured, step-by-step workflow. The dataset includes encoding issues, wrong date formats, mixed types, and inconsistent categorical values.
+# Messy Employee Data Cleaning
 
-The focus is on building a repeatable cleaning process, not just fixing one specific file.
+A beginner-friendly pandas project that loads, inspects, cleans, audits, and exports a messy employee CSV dataset.
 
-Project Requirements
-Load the dataset and inspect it before doing anything
-Handle encoding and delimiter issues at load time
-Fix column data types explicitly using the dtype argument
-Convert date columns using pd.to_datetime() with errors='coerce'
-Standardize categorical columns (strip whitespace, fix capitalisation)
-Export a cleaned version of the dataset and do a final audit
-Technologies to Use
-Python
-Pandas
-Jupyter Notebook
-What You Will Learn
-The data cleaning workflow I’ll be working with consists of 5 simple stages(Load, Inspect, Clean, Review, Export) that you can reuse on any dataset. You will also understand subtle issues like silent type casting and why checking the first few rows before loading a large file can save you a lot of time.
+Project reference: https://roadmap.sh/projects/clean-csv
 
-Want to See a Solution?
-A full walkthrough of this project is available on Towards Data Science: 🔗 I Cleaned a Messy CSV File Using Pandas
+## Project Files
+
+- `clean.ipynb` - Main Jupyter notebook containing the cleaning workflow.
+- `Messy_Employee_dataset.csv` - Original input dataset.
+- `Messy_Employee_dataset_cleaned.csv` - Cleaned output produced by the notebook.
+- `project description.md` - Project requirements and learning goals.
+
+## Requirements
+
+- Python 3
+- VS Code with the Jupyter and Python extensions, or another Jupyter environment
+- pandas
+- numpy
+
+Install the Python packages with:
+
+```powershell
+python -m pip install pandas numpy
+```
+
+## Open and Use the Project
+
+1. Open the project folder in VS Code.
+2. Open `clean.ipynb`.
+3. Select a Python 3 kernel when VS Code prompts you.
+4. Run the notebook cells from top to bottom.
+5. The notebook will:
+   - Load the CSV with UTF-8 encoding and comma separation.
+   - Apply explicit column data types.
+   - Convert `Join_Date` to dates.
+   - Standardize categorical values.
+   - Fill missing age and salary values.
+   - Check for duplicate records.
+   - Export and audit the cleaned dataset.
+6. Open `Messy_Employee_dataset_cleaned.csv` to view the result.
+
+You can also run the notebook with Jupyter from the project folder:
+
+```powershell
+jupyter notebook clean.ipynb
+```
+
+## Output
+
+The final audit checks the exported file's shape, columns, missing values, duplicate records, and categorical whitespace. The cleaned file is written as:
+
+```text
+Messy_Employee_dataset_cleaned.csv
+```
